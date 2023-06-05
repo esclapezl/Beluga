@@ -1,0 +1,111 @@
+/* https://colorhunt.co/palette/f6f1f1afd3e219a7ce146c94 */
+
+/*
+#F6F1F1
+#AFD3E2
+#19A7CE
+#146C94
+*/
+:root {
+  --blanc: #F6F1F1;
+  --bleu-pastel: #AFD3E2;
+  --bleu-clair: #19A7CE;
+  --bleu-fonce: #146C94;
+  --gris:#9facb1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+    
+html {
+    margin: 0;
+    background-color: var(--blanc);
+    
+}
+    
+body {
+    margin: 0;
+    width:100vw;
+   
+    
+}
+
+@font-face {
+    font-family: BraahOne;
+    src: url(fonts/BraahOne-Regular.ttf);
+}
+
+#navbar{
+    display: flex;
+    flex-direction: row;
+    
+    align-items: center;
+    column-gap: 5%;
+    background-color: var(--bleu-clair);
+    /* padding: 5px 5px 5px 5px; */
+
+    height: 50px;
+    width: 100vw;
+
+  
+}
+
+#logo{
+    max-width: 60px;
+    max-height: 60px;
+    margin-left: 10px;
+}
+
+#sous-navbar{
+    background-color: var(--bleu-fonce);
+    height: 20px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.lien_nav{
+    max-width: 100%;
+    max-height: 100%;
+
+    font-family: 'BraahOne';
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    transition:all 0.1s linear;
+}
+
+.lien_nav:hover{ 
+   color: var(--bleu-pastel);
+}
+
+.texte-intro{
+    color: var(--bleu-clair);
+    font-family: 'BraahOne';
+    font-size: 5em;
+
+    margin-left: 50px;
+}
+
+#texte-intro-fort{
+    color: var(--bleu-fonce);
+}
+
+#reserver{
+    background-color: var(--bleu-pastel);
+}
+
+#acheter{
+    background-color: var(--bleu-clair);
+}
+
+#footer{
+    background-color: var(--bleu-fonce);
+    height: 200px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
