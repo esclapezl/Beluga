@@ -10,6 +10,7 @@
   --blanc: #F6F1F1;
   --bleu-pastel: #AFD3E2;
   --bleu-clair: #19A7CE;
+  --bleu-clair-vibrant: #2ad1ff;
   --bleu-fonce: #146C94;
   --gris:#9facb1;
 }
@@ -28,13 +29,28 @@ html {
 body {
     margin: 0;
     width:100vw;
-   
+    font-family: Poppins;
     
 }
 
 @font-face {
     font-family: BraahOne;
     src: url(fonts/BraahOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: Poppins-extraBold;
+    src: url(fonts/Poppins-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: Poppins-semiBold;
+    src: url(fonts/Poppins-SemiBold.ttf);
 }
 
 #navbar{
@@ -69,7 +85,6 @@ body {
     max-width: 100%;
     max-height: 100%;
 
-    font-family: 'BraahOne';
     color: white;
     text-decoration: none;
     text-transform: uppercase;
@@ -95,17 +110,63 @@ body {
 
 #reserver{
     background-color: var(--bleu-pastel);
+    display: flex;
+    flex-direction: row;
+
+}
+
+.colonne{
+    color:var(--bleu-fonce);
+    font-family: Poppins-semiBold;
+    width: 50%;
+}
+
+#form-resa{
+    max-width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.input-resa{
+    width: 70%;
+    margin-left: 20px;
+    margin: 10px 0 10px 0;
+    border: none;
+    font-family: Poppins-semiBold;
+    border-radius: 20px;
+    padding: 5px 10px 5px 10px;
+}
+
+.input-resa:focus .button:focus{
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+.button{
+    padding: 10px 20px 10px 20px;
+    color: white;
+    border: none;
+    font-size: 20px;
+    border-radius: 25px;
+    background-color: var(--bleu-clair-vibrant);
+    margin-left: 40px;
+}
+
+h2{
+    font-family: Poppins-extraBold;
 }
 
 #acheter{
     background-color: var(--bleu-clair);
 }
 
-#footer{
+#apropos{
     background-color: var(--bleu-fonce);
     height: 200px;
     width: 100%;
-    position: absolute;
-    bottom: 0;
+
+    
 }
 
