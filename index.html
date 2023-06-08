@@ -14,32 +14,37 @@
     </div>
     <div id="sous-navbar"></div>
     
-    <div class="texte-intro">
-      Le taxi volant <br>
-      <span id="texte-intro-fort">Beluga</span>.
-    </div>
+    <div id="home">
+      <div class="texte-intro">
+        Le taxi volant <br>
+        <span id="texte-intro-fort">Beluga</span>.
+      </div>
 
-    <div id="photos">
-      <img src="assets/img/portrait1">
-      <img src="assets/img/portrait2">
-      <img src="assets/img/portrait3">
-      <img src="assets/img/portrait4">
+      <h3>Un projet réalisé par : </h3>
+      <div id="photos">
+        <div class="sous-portrait"><img class="portrait" src="assets/img/portrait1.png">Mattéo</div>
+        <div class="sous-portrait"><img class="portrait" src="assets/img/portrait2.png">Nicolas Julien</div>
+        <div class="sous-portrait"><img class="portrait" src="assets/img/portrait3.png">Orion</div>
+      </div>
     </div>
+    
+
+    
 
     <div id="reserver">
   
       <div class="colonne">
-        <img src="assets/img/reserver.png">
+        <img id="pic-resa" src="assets/img/reserver.png">
       </div>
       <div class="colonne">
-        <div class="texte-titre-reserver"><h2>Où allez vous ?</h2></div>
-        <!-- <div id="label-resa">Destination</div> -->
-        <form id="form-resa">
+        <form id="form-resa"></form>
+          <div class="titre"><h2>Où allez vous ?</h2></div>
+          <!-- <div id="label-resa">Destination</div> -->
           <input type="text" class="input-resa" placeholder="Destination">
           <!-- <div id="label-resa">Date de départ</div> -->
-          <input type="text" class="input-resa" placeholder="Date de départ">
+          <input type="date" class="input-resa" placeholder="Date de départ">
           <!-- <div id="label-resa">Heure de départ</div> -->
-          <input type="text" class="input-resa" placeholder="Heure de départ">
+          <input type="time" class="input-resa" placeholder="Heure de départ">
           <input type="submit" class="button" value="En route !">
         </form>
       </div>
@@ -47,11 +52,35 @@
     </div>
 
     <div id="acheter">
-      <div>Investissez dès maintenant dans un <div>Beluga</div></div>
+      <div id="buy">
+        <div class="texte-buy">Rejoignez l'aventure et investissez dans votre propre <span id="titre-buy">Beluga</span>.</div>
+        <br>
+        <p>Le projet Beluga Taxi Volant est en cours et nous sommes impatients de vous faire vivre cette expérience unique. Nous vous promettons que vous n'oublierez jamais votre voyage à bord de notre béluga volant, et que vous en redemanderez encore et encore !</p>
+        <br>
+        <input type="submit" class="button" id="btn-alt" value="Commander">
+      </div>
+    
+      <img id="img-beluga" src="assets/img/beluga.png">
     </div>
 
+    
     <div id="apropos">
-      Beluga est...
+      <div id="titre-abt">Plus sur notre projet</div>
+      
+      <div id="txt-abt">
+        <p>
+          Le projet Beluga s'inspire de la structure emblématique de la Fiat Multipla, un véhicule qui a suscité des opinions divergentes en raison de son design unique. En reprenant cette base, l'équipe de Beluga a développé une version futuriste et volante qui combine l'ingénierie aéronautique de pointe avec un intérieur spacieux et confortable.
+        </p>
+
+        <p>
+          Les taxis volants Beluga offrent une solution de mobilité urbaine innovante et écologique. Grâce à leur capacité de vol vertical et horizontal, ils peuvent se déplacer rapidement et efficacement au-dessus des embouteillages et des routes encombrées. Cela permet aux passagers de gagner un temps précieux et de réduire leur stress lié aux déplacements quotidiens.
+        </p>
+          
+        <p>
+          À l'intérieur de ces taxis volants, le confort et la sécurité des passagers sont une priorité absolue. Les sièges sont ergonomiques et équipés de technologies avancées pour assurer un voyage agréable. Les fenêtres panoramiques offrent une vue imprenable sur la ville, créant une expérience unique pour les passagers. De plus, les systèmes de sécurité de pointe et les protocoles de maintenance rigoureux garantissent un niveau élevé de fiabilité et de sûreté lors des déplacements.
+        </p>
+      </div>
+      <img id="img-abt" src="assets/img/beluga_animal.png">
     </div>
 
   

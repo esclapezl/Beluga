@@ -22,7 +22,10 @@
     
 html {
     margin: 0;
-    background-color: var(--blanc);
+    background-color: white;
+    width:100vw;
+    max-width: 100%;
+    overflow-x: hidden;
     
 }
     
@@ -33,10 +36,7 @@ body {
     
 }
 
-@font-face {
-    font-family: BraahOne;
-    src: url(fonts/BraahOne-Regular.ttf);
-}
+
 
 @font-face {
     font-family: Poppins;
@@ -49,6 +49,11 @@ body {
 }
 
 @font-face {
+    font-family: Poppins-Bold;
+    src: url(fonts/Poppins-Bold.ttf);
+}
+
+@font-face {
     font-family: Poppins-semiBold;
     src: url(fonts/Poppins-SemiBold.ttf);
 }
@@ -56,76 +61,150 @@ body {
 #navbar{
     display: flex;
     flex-direction: row;
+
+    
     
     align-items: center;
     column-gap: 5%;
-    background-color: var(--bleu-clair);
+    background-color: white;
     /* padding: 5px 5px 5px 5px; */
 
     height: 50px;
     width: 100vw;
 
-  
+    position: fixed;
+    top: 0;
+
+    z-index: 3;
 }
 
 #logo{
     max-width: 60px;
     max-height: 60px;
-    margin-left: 10px;
+    margin-left: 10vw;
+
+    
 }
 
 #sous-navbar{
-    background-color: var(--bleu-fonce);
-    height: 20px;
+    background-color: var(--bleu-clair-vibrant);
+    height: 3px;
     width: 100%;
     margin-bottom: 50px;
+
+    top: 50px;
+    position: fixed;
+
+    box-shadow: 0px 0px 30px 0.5px  var(--bleu-clair-vibrant) ;
+
+    z-index: 2;
 }
 
 .lien_nav{
     max-width: 100%;
     max-height: 100%;
 
-    color: white;
+    color: var(--bleu-clair-vibrant);
+    font-family: Poppins-Bold;
     text-decoration: none;
-    text-transform: uppercase;
+    
 
     transition:all 0.1s linear;
 }
 
 .lien_nav:hover{ 
-   color: var(--bleu-pastel);
+   color: var(--bleu-fonce);
 }
 
 .texte-intro{
-    color: var(--bleu-clair);
-    font-family: 'BraahOne';
-    font-size: 5em;
-
-    margin-left: 50px;
+    color: var(--bleu-fonce);
+    font-family: Poppins-SemiBold;
+    font-size: 6em;
+    line-height: 0.8em;
+    margin-bottom: 100px;
+    margin-top:50px;
+    
+    
 }
 
 #texte-intro-fort{
-    color: var(--bleu-fonce);
+    color: var(--bleu-clair-vibrant);
+    font-family: Poppins-SemiBold;
+}
+
+#home{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+#photos{
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+}
+.portrait{
+    max-height: 250px;
+    filter: grayscale(100%);
+    transition: 0.3s;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.portrait:hover{
+    transform: scale(110%);
+    box-shadow: 0px 0px 30px 0.5px  var(--bleu-clair-vibrant) ;
+}
+
+.sous-portrait{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: poppins-semibold;
+    color: var(--bleu-clair-vibrant);
 }
 
 #reserver{
-    background-color: var(--bleu-pastel);
+    background-color: var(--bleu-fonce);
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
 
+}
+
+.titre{
+    font-size: 25px;
+    margin-bottom: 20px;
+    color:white;
+    
 }
 
 .colonne{
     color:var(--bleu-fonce);
     font-family: Poppins-semiBold;
-    width: 50%;
-}
-
-#form-resa{
     max-width: 70%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#form-resa{
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
     align-items: start;
+}
+
+#pic-resa{
+    width: 500px;
+    max-height: 100%;
+    padding: 0;
+
 }
 
 .input-resa{
@@ -138,35 +217,134 @@ body {
     padding: 5px 10px 5px 10px;
 }
 
-.input-resa:focus .button:focus{
+.input-resa:focus{
     outline: none;
     border: none;
     box-shadow: none;
+   
 }
 
 .button{
-    padding: 10px 20px 10px 20px;
+    padding: 10px 30px 10px 30px;
     color: white;
     border: none;
+    font-family: Poppins-semiBold;
     font-size: 20px;
-    border-radius: 25px;
+    border-radius: 30px;
     background-color: var(--bleu-clair-vibrant);
-    margin-left: 40px;
+    cursor: pointer;
+    margin-top: 20px;
+    outline: #2ad1ff 5px;
+
+    transition:all 0.05s linear;
+}
+
+.button:hover{
+    background-color: white;
+    color: var(--bleu-clair-vibrant)
+}
+
+#btn-alt{
+
+    width: 200px;
+    align-self: center;
+    transition: 0.1s linear;
+}
+
+#btn-alt:hover{
+    
+    outline:  3px solid var(--bleu-clair-vibrant);
+    transform: scale(110%);
 }
 
 h2{
     font-family: Poppins-extraBold;
 }
 
+h3{
+    color: var(--bleu-clair-vibrant);
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
 #acheter{
-    background-color: var(--bleu-clair);
+    margin-top: 150px;
+    margin-bottom: 150px;
+    margin-left: 15%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    column-gap: 40px;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
 }
 
-#apropos{
-    background-color: var(--bleu-fonce);
-    height: 200px;
-    width: 100%;
-
+#buy{
     
+    display: flex;
+    flex-direction: column;
 }
+
+#buy p{
+    text-align: right;
+}
+
+.texte-buy{
+    font-size: 50px;
+    color:var(--bleu-fonce);
+    font-family: Poppins-semibold;
+    line-height: 1em;
+    width: 100%;
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+#titre-buy{
+    color:var(--bleu-clair-vibrant);
+}
+
+#img-beluga{
+    height: 600px;
+    width: auto;
+    transition: 0.3s ;
+    cursor: pointer;
+}
+
+#img-beluga:hover{
+    transform: scale(110%);
+}
+
+
+
+#titre-abt{
+    font-family: poppins-bold;
+    color: var(--bleu-clair-vibrant);
+    font-size: 50px;
+}
+#apropos{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 10% 0 10%;
+}
+
+#txt-abt{
+    display: flex;
+    flex-direction: column;
+
+}
+
+#txt-abt p{
+
+}
+
+#img-abt{
+    height: 500px;
+    width: auto;
+}
+
 
